@@ -38,6 +38,7 @@ console.log(arraycasuale)
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
+console.log("**********************terzo esercizio********************")
 let numeriArray = [2,342,5325,5654,34254,23,56,2]
 const filterPari = numeriArray.filter(function(elemento) {
  return elemento %2 === 0})
@@ -47,27 +48,54 @@ console.log(filterPari)
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
-*/
+
+*/console.log("**********************quarto esercizio********************")
 numeriArray.forEach(function(elemento){
-  const sommanumeri = elemento + elemento
-  console.log(numeriArray)})
+  let sommanumeri = elemento + elemento
+  console.log(sommanumeri)})
+
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
-*/
+  */
+ console.log("**********************sesto esercizio********************")
+ const SecondoArray = numeriArray.map(function(n){
+  const secondo = numeriArray + n
+  return secondo
+})
+console.log(SecondoArray)
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+console.log("**********************settimo esercizio********************")
+const arrayStringhe =[ "Epicode", "ciao sono simone", "buongiorno da Roma"]
+const lunghezzaStringhe= arrayStringhe.map(function(elemento
+
+){ let lunghezza = elemento.length
+return lunghezza
+})
+console.log(lunghezzaStringhe)
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+console.log("**********************ottavo esercizio********************")
 
+function numeri1() {
+  let numeridispari=[];
+  for (let i = 1; i <=99;i += 2){
+    numeridispari.push[i]
+  }
+  return  numeridispari 
+
+}
+let numeridispari = numeri1()
+console.log(numeridispari)
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
   {
@@ -187,6 +215,16 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+console.log("**********************nono esercizio********************")
+movies.forEach (function(film){
+let filmPiuVecchio = null
+
+  if (!filmPiuVecchio || film.year < filmPiuVecchio.year) {
+    filmPiuVecchio = film;
+    return filmPiuVecchio;
+}
+})
+console.log(film)
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
