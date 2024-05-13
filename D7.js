@@ -89,7 +89,7 @@ console.log("**********************ottavo esercizio********************")
 function numeri1() {
   let numeridispari=[];
   for (let i = 1; i <=99;i += 2){
-    numeridispari.push[i]
+    numeridispari.push(i)
   }
   return  numeridispari 
 
@@ -216,27 +216,48 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 console.log("**********************nono esercizio********************")
-movies.forEach (function(film){
+/* movies.forEach (function(film){
 let filmPiuVecchio = null
 
-  if (!filmPiuVecchio || film.year < filmPiuVecchio.year) {
+  if (!filmPiuVecchio || film.Year < filmPiuVecchio.Year) {
     filmPiuVecchio = film;
     return filmPiuVecchio;
 }
 })
-console.log(film)
+console.log(film) */
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+console.log("**********************decimo esercizio********************")
+for (let i=0; i< movies.length; i++)
+
+{
+let numeroFilm = movies.length
+
+console.log(numeroFilm)
+}
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
+
 */
+console.log("**********************undicisemo esercizio********************")
+const titolifilm = movies.map(function(n) {
+const titolofilm = n.Title
+return titolofilm
+})
+console.log(titolifilm)
 
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+console.log("**********************dodicesimo esercizio********************")
+const film2000 = movies.filter(function(n){
+  let film = n.Year>=2000
+  return film})
+  console.log(film2000)
+
 
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
@@ -244,7 +265,16 @@ console.log(film)
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
+
 */
+
+console.log("**********************quattordicesimo esercizio********************")
+const specificofilm = movies.find(function(imdbID)
+{
+imdbID.imdbID === 't4154796'
+
+})
+console.log(specificofilm)
 
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
